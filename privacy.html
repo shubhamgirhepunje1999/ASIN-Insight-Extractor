@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Amazon Insight Extractor</title>
+    <style>
+        :root {
+            --color-bg: #0d0d12;
+            --color-text: #e2e8f0;
+            --color-primary: #3b82f6;
+            --color-surface: #1e1e2e;
+            --color-border: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Last Updated: May 2026</div>
+
+    <p>Thank you for using the <strong>Amazon Insight Extractor</strong> ("the Extension"). We respect your privacy and are committed to protecting it. This Privacy Policy explains what data we collect, how it is used, and how it is safeguarded.</p>
+
+    <h2>1. Data We Do NOT Collect</h2>
+    <p>The Extension operates entirely within your local browser environment. We <strong>do not</strong>:</p>
+    <ul>
+        <li>Collect, store, or transmit your personal data.</li>
+        <li>Track your browsing history across the web.</li>
+        <li>Send your extracted Amazon data to any external servers or third-party databases.</li>
+        <li>Collect analytics or telemetry data.</li>
+    </ul>
+
+    <h2>2. Data We Process Locally</h2>
+    <p>In order for the Extension to function correctly, it processes data locally on your machine:</p>
+    <ul>
+        <li><strong>Amazon ASIN Data:</strong> The extension reads and extracts product information directly from the Amazon pages you authorize it to scan.</li>
+        <li><strong>Local Storage:</strong> Scraped data, user settings (such as local postcodes), and progress states are saved directly to your browser's local storage (<code>chrome.storage.local</code>). This data never leaves your device unless you manually choose to export it as a CSV or Excel file.</li>
+    </ul>
+
+    <h2>3. Permissions Required</h2>
+    <p>The Extension requests the following Chrome permissions, which are strictly necessary for its core functionality:</p>
+    <ul>
+        <li><strong><code>tabs</code>:</strong> Required to open new Amazon product pages, inject the scraping scripts, and close the tabs once data extraction is complete.</li>
+        <li><strong><code>storage</code>:</strong> Required to save your extraction results and application settings locally.</li>
+        <li><strong><code>downloads</code>:</strong> Required to allow you to export your compiled data as CSV, Excel, or ZIP files directly to your hard drive.</li>
+        <li><strong><code>host permissions (*://*.amazon.*/*)</code>:</strong> Required to interact with Amazon's marketplace domains to read and extract product details.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>We do not integrate with any third-party advertising or analytics services. The extension relies solely on open-source libraries (e.g., SheetJS for Excel generation) which operate 100% locally on your machine.</p>
+
+    <h2>5. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time as we add new features or comply with Chrome Web Store regulations. All changes will be reflected on this page.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+    <p><strong>Email:</strong> <a href="mailto:shubhamgi@zohomail.in">shubhamgi@zohomail.in</a></p>
+</div>
+
+</body>
+</html>
