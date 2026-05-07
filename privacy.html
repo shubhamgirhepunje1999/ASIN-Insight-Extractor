@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Amazon Insight Extractor</title>
+    <title>Privacy Policy - ASIN Insight Extractor</title>
     <style>
         :root {
             --color-bg: #0d0d12;
@@ -11,6 +11,7 @@
             --color-primary: #3b82f6;
             --color-surface: #1e1e2e;
             --color-border: #333;
+            --color-accent: #60a5fa;
         }
 
         body {
@@ -41,7 +42,14 @@
 
         h2 {
             color: #fff;
-            margin-top: 30px;
+            margin-top: 35px;
+            font-size: 1.3em;
+        }
+
+        h3 {
+            color: var(--color-accent);
+            margin-top: 20px;
+            font-size: 1.1em;
         }
 
         a {
@@ -51,6 +59,25 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        ul {
+            background: rgba(255,255,255,0.02);
+            padding: 20px 20px 20px 40px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ff79c6;
+            font-family: monospace;
         }
 
         .last-updated {
@@ -67,41 +94,41 @@
     <h1>Privacy Policy</h1>
     <div class="last-updated">Last Updated: May 2026</div>
 
-    <p>Thank you for using the <strong>Amazon Insight Extractor</strong> ("the Extension"). We respect your privacy and are committed to protecting it. This Privacy Policy explains what data we collect, how it is used, and how it is safeguarded.</p>
+    <p>Thank you for using the <strong>ASIN Insight Extractor</strong> ("the Extension"). We deeply respect your privacy and are committed to protecting it. This Privacy Policy is designed to be fully transparent about what data we collect, how it is used, and why certain permissions are required.</p>
 
-    <h2>1. Data We Do NOT Collect</h2>
-    <p>The Extension operates entirely within your local browser environment. We <strong>do not</strong>:</p>
+    <h2>1. The Golden Rule: 100% Local Data Processing</h2>
+    <p>The Extension operates entirely within your local web browser. <strong>We do not own, operate, or utilize any external servers.</strong> Because of this, we <strong>do not</strong> and <strong>cannot</strong>:</p>
     <ul>
-        <li>Collect, store, or transmit your personal data.</li>
-        <li>Track your browsing history across the web.</li>
-        <li>Send your extracted Amazon data to any external servers or third-party databases.</li>
-        <li>Collect analytics or telemetry data.</li>
+        <li>Collect, store, transmit, or sell your personal data.</li>
+        <li>Track your browsing history or behavioral patterns across the web.</li>
+        <li>Send your extracted Amazon data (or ASIN lists) to any third-party databases.</li>
+        <li>Collect background analytics or telemetry data.</li>
     </ul>
 
-    <h2>2. Data We Process Locally</h2>
-    <p>In order for the Extension to function correctly, it processes data locally on your machine:</p>
+    <h2>2. Data Processed Locally By You</h2>
+    <p>In order to provide features like Crash-Recovery, Historical Data Viewing, and Bulk Extraction, the extension must process and store data locally on your computer:</p>
     <ul>
-        <li><strong>Amazon ASIN Data:</strong> The extension reads and extracts product information directly from the Amazon pages you authorize it to scan.</li>
-        <li><strong>Local Storage:</strong> Scraped data, user settings (such as local postcodes), and progress states are saved directly to your browser's local storage (<code>chrome.storage.local</code>). This data never leaves your device unless you manually choose to export it as a CSV or Excel file.</li>
+        <li><strong>Amazon Product Data:</strong> The extension programmatically visits Amazon product detail pages that you have explicitly requested it to scan (via your provided ASINs) and extracts visible information (like title, price, brand, etc.).</li>
+        <li><strong>Local Storage (chrome.storage.local):</strong> All scraped data, your custom settings (such as local postcode preferences), your scrape history, and active session states (for the Crash-Recovery feature) are saved directly to your browser's encrypted local storage. This data never leaves your device unless you manually click a button to export it as a CSV or Excel file.</li>
     </ul>
 
-    <h2>3. Permissions Required</h2>
-    <p>The Extension requests the following Chrome permissions, which are strictly necessary for its core functionality:</p>
+    <h2>3. Required Permissions Explained</h2>
+    <p>To function seamlessly, the Extension requests the absolute minimum permissions required by Google Chrome:</p>
     <ul>
-        <li><strong><code>tabs</code>:</strong> Required to open new Amazon product pages, inject the scraping scripts, and close the tabs once data extraction is complete.</li>
-        <li><strong><code>storage</code>:</strong> Required to save your extraction results and application settings locally.</li>
-        <li><strong><code>downloads</code>:</strong> Required to allow you to export your compiled data as CSV, Excel, or ZIP files directly to your hard drive.</li>
-        <li><strong><code>host permissions (*://*.amazon.*/*)</code>:</strong> Required to interact with Amazon's marketplace domains to read and extract product details.</li>
+        <li><strong><code>scripting</code>:</strong> Required to securely inject our <i>extractor.js</i> logic into the background Amazon tabs that the dashboard opens. This is what actually reads the product details from the webpage.</li>
+        <li><strong><code>storage</code>:</strong> Required to save your extraction results, session history, and application settings locally on your hard drive.</li>
+        <li><strong><code>unlimitedStorage</code>:</strong> Required because Google Chrome natively limits local storage to a tiny 5MB. Because this extension saves your historical scraping sessions (which can contain hundreds of products and high-resolution image URLs), the 5MB cap would be hit almost immediately, causing the extension to crash. This simply removes that arbitrary cap for your local machine.</li>
+        <li><strong><code>Host Permissions (*://*.amazon.*/*)</code>:</strong> Required to interact with Amazon's marketplace domains. Without this, the extension would be entirely blocked from reading any data on Amazon.</li>
     </ul>
 
-    <h2>4. Third-Party Services</h2>
-    <p>We do not integrate with any third-party advertising or analytics services. The extension relies solely on open-source libraries (e.g., SheetJS for Excel generation) which operate 100% locally on your machine.</p>
+    <h2>4. Third-Party Open Source Libraries</h2>
+    <p>We do not integrate with any third-party advertising, tracking, or telemetry services. The extension does rely on trusted, open-source libraries (such as <i>SheetJS</i> for generating Excel files and <i>JSZip</i> for bundling images) to format your exported files. These libraries are bundled directly inside the extension and operate 100% locally on your machine without making any external network requests.</p>
 
     <h2>5. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time as we add new features or comply with Chrome Web Store regulations. All changes will be reflected on this page.</p>
+    <p>We may update this Privacy Policy from time to time as we add new features or comply with Google Chrome Web Store regulations. All changes will be reflected on this page.</p>
 
     <h2>6. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+    <p>If you have any questions, concerns, or technical requests regarding this Privacy Policy or how your data is handled, please contact the developer at:</p>
     <p><strong>Email:</strong> <a href="mailto:shubhamgi@zohomail.in">shubhamgi@zohomail.in</a></p>
 </div>
 
