@@ -1,136 +1,1637 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ASIN Insight Extractor</title>
-    <style>
-        :root {
-            --color-bg: #0d0d12;
-            --color-text: #e2e8f0;
-            --color-primary: #3b82f6;
-            --color-surface: #1e1e2e;
-            --color-border: #333;
-            --color-accent: #60a5fa;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Bulk Amazon Scraper - Product Data Extractor</title>
+  <meta name="description"
+    content="Official Privacy Policy and Chrome Web Store Data Safety Declaration for Bulk Amazon Scraper - Product Data Extractor. 100% Client-side, zero personal data collection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #080c15;
+      --bg-alt: #0c1220;
+      --surface: #111a2e;
+      --surface-card: #16223b;
+      --surface-card-hover: #1c2b4a;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(255, 153, 0, 0.35);
+      --border-subtle: rgba(255, 255, 255, 0.04);
+      --primary: #ff9900;
+      --primary-hover: #f08804;
+      --primary-glow: rgba(255, 153, 0, 0.15);
+      --accent-prime: #00a8e1;
+      --accent-prime-glow: rgba(0, 168, 225, 0.15);
+      --success: #10b981;
+      --success-glow: rgba(16, 185, 129, 0.15);
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 40px;
-            background-color: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
 
-        h1 {
-            color: var(--color-primary);
-            border-bottom: 2px solid var(--color-border);
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-        h2 {
-            color: #fff;
-            margin-top: 35px;
-            font-size: 1.3em;
-        }
+    /* CUSTOM SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
 
-        h3 {
-            color: var(--color-accent);
-            margin-top: 20px;
-            font-size: 1.1em;
-        }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-color);
+    }
 
-        a {
-            color: var(--color-primary);
-            text-decoration: none;
-        }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2d47;
+      border-radius: 4px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2b3d60;
+    }
 
-        ul {
-            background: rgba(255,255,255,0.02);
-            padding: 20px 20px 20px 40px;
-            border-radius: 8px;
-            border: 1px solid var(--color-border);
-        }
+    /* TOP NOTICE BAR */
+    .top-notice-bar {
+      background: linear-gradient(90deg, #0b1426, #15223c 50%, #0b1426);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-        li {
-            margin-bottom: 10px;
-        }
+    .top-notice-bar strong {
+      color: var(--primary);
+    }
 
-        code {
-            background: #000;
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: #ff79c6;
-            font-family: monospace;
-        }
+    /* HEADER */
+    .site-header {
+      background: rgba(11, 16, 29, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 14px 24px;
+    }
 
-        .last-updated {
-            font-size: 0.9em;
-            color: #888;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-    </style>
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #1f2c45, #111a2d);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-logo-wrap img {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+    }
+
+    .brand-text-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 40%, #ff9900 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .version-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(255, 153, 0, 0.12);
+      color: var(--primary);
+      border: 1px solid rgba(255, 153, 0, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-header:hover {
+      background: var(--surface-card-hover);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .btn-header.primary {
+      background: var(--primary);
+      color: #0b0f19;
+      border-color: var(--primary);
+    }
+
+    .btn-header.primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    /* HERO SECTION */
+    .hero-wrap {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 153, 0, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(0, 168, 225, 0.05) 0%, transparent 40%);
+      border-bottom: 1px solid var(--border);
+      padding: 50px 24px 40px 24px;
+    }
+
+    .hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .pill-shield {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--success);
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .pill-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      border: 1px solid var(--border);
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    /* 4 CORE HIGHLIGHT CARDS */
+    .hero-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .hero-card:hover::after {
+      opacity: 1;
+    }
+
+    .hero-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(255, 153, 0, 0.12);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .hero-card.card-blue .hero-card-icon {
+      background: rgba(0, 168, 225, 0.12);
+      color: var(--accent-prime);
+    }
+
+    .hero-card.card-green .hero-card-icon {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--success);
+    }
+
+    .hero-card.card-purple .hero-card-icon {
+      background: rgba(168, 85, 247, 0.12);
+      color: #c084fc;
+    }
+
+    .hero-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .hero-card-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ARCHITECTURE DIAGRAM BOX */
+    .arch-box {
+      margin-top: 30px;
+      background: linear-gradient(135deg, rgba(17, 26, 46, 0.8), rgba(22, 34, 59, 0.6));
+      border: 1px solid rgba(255, 153, 0, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .arch-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .arch-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .arch-pipeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      position: relative;
+    }
+
+    .pipeline-step {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pipeline-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent-prime);
+      font-weight: 600;
+    }
+
+    .pipeline-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .pipeline-desc {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .pipeline-step.step-blocked {
+      border: 1px dashed rgba(239, 68, 68, 0.4);
+      background: rgba(239, 68, 68, 0.04);
+    }
+
+    .pipeline-step.step-blocked .pipeline-label {
+      color: var(--danger);
+      text-decoration: line-through;
+    }
+
+    /* MAIN TWO-COLUMN LAYOUT */
+    .main-layout {
+      max-width: 1280px;
+      margin: 40px auto 80px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* STICKY SIDEBAR TABLE OF CONTENTS */
+    .sidebar-toc {
+      position: sticky;
+      top: 96px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .toc-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-link {
+      display: block;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      line-height: 1.35;
+      border-left: 2px solid transparent;
+    }
+
+    .toc-link:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.04);
+      border-left-color: var(--primary);
+    }
+
+    .toc-link.active {
+      color: var(--primary);
+      background: rgba(255, 153, 0, 0.08);
+      border-left-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .toc-footer-card {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* MAIN DOCUMENT CONTENT */
+    .policy-doc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: clamp(24px, 4vw, 56px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    .policy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 110px;
+    }
+
+    .policy-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-num {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(255, 153, 0, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      border: 1px solid rgba(255, 153, 0, 0.2);
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-prime);
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background: rgba(255, 255, 255, 0.07);
+      color: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    ul, ol {
+      margin: 14px 0 22px 24px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    /* CALLOUT BOXES */
+    .callout {
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 22px 0;
+      border-left: 4px solid var(--primary);
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .callout-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+    }
+
+    .callout.callout-success {
+      border-left-color: var(--success);
+      background: rgba(16, 185, 129, 0.05);
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    .callout.callout-success .callout-icon {
+      color: var(--success);
+    }
+
+    .callout.callout-info {
+      border-left-color: var(--accent-prime);
+      background: rgba(0, 168, 225, 0.05);
+      border-color: rgba(0, 168, 225, 0.2);
+    }
+
+    .callout.callout-info .callout-icon {
+      color: var(--accent-prime);
+    }
+
+    .callout.callout-warning {
+      border-left-color: var(--warning);
+      background: rgba(245, 158, 11, 0.05);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .callout.callout-warning .callout-icon {
+      color: var(--warning);
+    }
+
+    .callout-content {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .callout-content strong {
+      color: #ffffff;
+    }
+
+    /* COMPARISON / FEATURE TABLES */
+    .table-container {
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 14px 18px;
+      font-weight: 700;
+      color: #ffffff;
+      border-bottom: 1px solid var(--border);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    /* PERMISSION DETAIL CARDS */
+    .perm-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 20px 0 28px 0;
+    }
+
+    .perm-card-detailed {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      transition: border-color 0.2s;
+    }
+
+    .perm-card-detailed:hover {
+      border-color: rgba(255, 153, 0, 0.3);
+    }
+
+    .perm-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .perm-api-name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: rgba(255, 153, 0, 0.12);
+      padding: 3px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 153, 0, 0.25);
+    }
+
+    .perm-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    .perm-badge.required {
+      background: rgba(0, 168, 225, 0.12);
+      color: var(--accent-prime);
+      border: 1px solid rgba(0, 168, 225, 0.25);
+    }
+
+    .perm-badge.optional {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--success);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .perm-purpose-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 4px;
+    }
+
+    .perm-purpose-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* STEP LIST */
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+    }
+
+    .step-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 153, 0, 0.15);
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .step-text strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: linear-gradient(135deg, #131c2e, #1a2740);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .contact-item {
+      background: var(--bg-color);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .contact-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      word-break: break-all;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #060910;
+      border-top: 1px solid var(--border);
+      padding: 50px 24px 36px 24px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+    }
+
+    .footer-links-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links-row a {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links-row a:hover {
+      color: var(--primary);
+    }
+
+    .footer-disclaimer {
+      max-width: 780px;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: #475569;
+    }
+
+    /* FLOATING BACK TO TOP */
+    .btn-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      z-index: 999;
+    }
+
+    .btn-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .btn-top:hover {
+      background: var(--primary);
+      color: #0b0f19;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* RESPONSIVENESS */
+    @media (max-width: 960px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .sidebar-toc {
+        position: relative;
+        top: 0;
+        max-height: none;
+      }
+    }
+
+    /* PRINT STYLES FOR EXPORT */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+      }
+
+      .site-header,
+      .top-notice-bar,
+      .sidebar-toc,
+      .btn-top,
+      .header-actions,
+      .site-footer {
+        display: none !important;
+      }
+
+      .main-layout {
+        display: block !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .policy-doc {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+
+      h2, h3, h4, strong {
+        color: #000000 !important;
+      }
+
+      p, li, td {
+        color: #374151 !important;
+      }
+
+      .perm-card-detailed,
+      .callout,
+      .table-container,
+      .hero-card {
+        border: 1px solid #e5e7eb !important;
+        background: #f9fafb !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Privacy Policy</h1>
-    <div class="last-updated">Last Updated: May 2026</div>
+  <!-- TOP BANNER -->
+  <div class="top-notice-bar">
+    <span>🛡️ <strong>Official Transparency Document</strong> • Manifest V3 Compliant • Single-Purpose E-Commerce Productivity Tool</span>
+    <span>•</span>
+    <span>Latest Review: <strong>September 13, 2026</strong></span>
+  </div>
 
-    <p>Thank you for using the <strong>ASIN Insight Extractor</strong> ("the Extension"). We deeply respect your privacy and are committed to protecting it. This Privacy Policy is designed to be fully transparent about what data we collect, how it is used, and why certain permissions are required.</p>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://chromewebstore.google.com/detail/lgleigcckmlhencepokmomhbhhmhmime/reviews" class="brand-link" target="_blank" rel="noopener noreferrer">
+        <div class="brand-logo-wrap">
+          <img src="icons/icon48.png" alt="Extension Logo" onerror="this.src='icons/icon16.png'">
+        </div>
+        <div class="brand-text-col">
+          <div class="brand-name">Bulk Amazon Scraper</div>
+          <div class="brand-sub">Product Data Extractor</div>
+        </div>
+      </a>
 
-    <h2>1. The Golden Rule: 100% Local Data Processing</h2>
-    <p>The Extension operates entirely within your local web browser. <strong>We do not own, operate, or utilize any external servers.</strong> Because of this, we <strong>do not</strong> and <strong>cannot</strong>:</p>
-    <ul>
-        <li>Collect, store, transmit, or sell your personal data.</li>
-        <li>Track your browsing history or behavioral patterns across the web.</li>
-        <li>Send your extracted Amazon data (or ASIN lists) to any third-party databases.</li>
-        <li>Collect background analytics or telemetry data.</li>
-    </ul>
+      <div class="header-actions">
+        <span class="version-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Manifest V3
+        </span>
+        <button class="btn-header" onclick="window.print()" title="Print or Save as PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print / PDF
+        </button>
+        <a href="https://chromewebstore.google.com/detail/lgleigcckmlhencepokmomhbhhmhmime/reviews" class="btn-header primary" target="_blank" rel="noopener noreferrer">
+          Chrome Store ↗
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <h2>2. Data Processed Locally By You</h2>
-    <p>In order to provide features like Crash-Recovery, Historical Data Viewing, and Bulk Extraction, the extension must process and store data locally on your computer:</p>
-    <ul>
-        <li><strong>Amazon Product Data:</strong> The extension programmatically visits Amazon product detail pages that you have explicitly requested it to scan (via your provided ASINs) and extracts visible information (like title, price, brand, etc.).</li>
-        <li><strong>Local Storage (chrome.storage.local):</strong> All scraped data, your custom settings (such as local postcode preferences), your scrape history, and active session states (for the Crash-Recovery feature) are saved directly to your browser's encrypted local storage. This data never leaves your device unless you manually click a button to export it as a CSV or Excel file.</li>
-    </ul>
+  <!-- HERO -->
+  <section class="hero-wrap">
+    <div class="hero-inner">
+      <div class="hero-badge-row">
+        <div class="pill-shield">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          100% Client-Side • Zero Remote Transmission
+        </div>
+        <div class="pill-date">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Effective Date: September 13, 2026
+        </div>
+      </div>
 
-    <h2>3. Required Permissions Explained</h2>
-    <p>To function seamlessly, the Extension requests the absolute minimum permissions required by Google Chrome:</p>
-    <ul>
-        <li><strong><code>scripting</code>:</strong> Required to securely inject our <i>extractor.js</i> logic into the background Amazon tabs that the dashboard opens. This is what actually reads the product details from the webpage.</li>
-        <li><strong><code>storage</code>:</strong> Required to save your extraction results, session history, and application settings locally on your hard drive.</li>
-        <li><strong><code>unlimitedStorage</code>:</strong> Required because Google Chrome natively limits local storage to a tiny 5MB. Because this extension saves your historical scraping sessions (which can contain hundreds of products and high-resolution image URLs), the 5MB cap would be hit almost immediately, causing the extension to crash. This simply removes that arbitrary cap for your local machine.</li>
-        <li><strong><code>Host Permissions (*://*.amazon.*/*)</code>:</strong> Required to interact with Amazon's marketplace domains. Without this, the extension would be entirely blocked from reading any data on Amazon.</li>
-    </ul>
+      <h1 class="hero-title">Privacy Policy & Data Transparency</h1>
+      <p class="hero-sub">
+        This document details the exact privacy protections, technical boundaries, and permissions used by <strong>Bulk Amazon Scraper - Product Data Extractor</strong>. We adhere strictly to Google's Chrome Web Store Developer Program Policies and the Limited Use Requirements.
+      </p>
 
-    <h2>4. Third-Party Open Source Libraries</h2>
-    <p>We do not integrate with any third-party advertising, tracking, or telemetry services. The extension does rely on trusted, open-source libraries (such as <i>SheetJS</i> for generating Excel files and <i>JSZip</i> for bundling images) to format your exported files. These libraries are bundled directly inside the extension and operate 100% locally on your machine without making any external network requests.</p>
+      <!-- 4 PLEDGES -->
+      <div class="hero-cards-grid">
+        <div class="hero-card">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div class="hero-card-title">100% Local Execution</div>
+          <div class="hero-card-text">Every scrape, parse step, audit comparison, and Excel download is calculated inside your browser's private V8 engine.</div>
+        </div>
 
-    <h2>5. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time as we add new features or comply with Google Chrome Web Store regulations. All changes will be reflected on this page.</p>
+        <div class="hero-card card-blue">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="hero-card-title">Zero Personal Data</div>
+          <div class="hero-card-text">We never capture, inspect, transmit, or monetize your Amazon login credentials, passwords, cookies, or personal identities.</div>
+        </div>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions, concerns, or technical requests regarding this Privacy Policy or how your data is handled, please contact the developer at:</p>
-    <p><strong>Email:</strong> <a href="mailto:shubhamgi@zohomail.in">shubhamgi@zohomail.in</a></p>
-</div>
+        <div class="hero-card card-green">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+          </div>
+          <div class="hero-card-title">Zero Trackers or Ads</div>
+          <div class="hero-card-text">Zero third-party trackers, zero Google Analytics, no Facebook Pixels, no telemetry beacons, and no injected ads.</div>
+        </div>
+
+        <div class="hero-card card-purple">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </div>
+          <div class="hero-card-title">Instant 1-Click Erasure</div>
+          <div class="hero-card-text">All cached lists, scrape history, and audit presets can be wiped cleanly in 1 click via the Dashboard Reset feature.</div>
+        </div>
+      </div>
+
+      <!-- ARCHITECTURE PIPELINE BOX -->
+      <div class="arch-box">
+        <div class="arch-header">
+          <div class="arch-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            Technical Data Flow & Architecture
+          </div>
+          <span style="font-size:0.75rem; color:var(--success); font-weight:600;">ENCLOSED LOCAL BROWSER SANDBOX</span>
+        </div>
+        <div class="arch-pipeline">
+          <div class="pipeline-step">
+            <span class="pipeline-num">STEP 01</span>
+            <span class="pipeline-label">User Input</span>
+            <span class="pipeline-desc">You supply target ASINs or search URLs directly into the dashboard.</span>
+          </div>
+          <div class="pipeline-step">
+            <span class="pipeline-num">STEP 02</span>
+            <span class="pipeline-label">Local Amazon DOM</span>
+            <span class="pipeline-desc">Extension opens worker tab to fetch public product page elements.</span>
+          </div>
+          <div class="pipeline-step">
+            <span class="pipeline-num">STEP 03</span>
+            <span class="pipeline-label">Local Memory Parser</span>
+            <span class="pipeline-desc">Public title, price, buy box, & specs extracted in local browser memory.</span>
+          </div>
+          <div class="pipeline-step">
+            <span class="pipeline-num">STEP 04</span>
+            <span class="pipeline-label">Direct Export</span>
+            <span class="pipeline-desc">Excel (.xlsx), CSV, and gallery ZIP created client-side for immediate download.</span>
+          </div>
+          <div class="pipeline-step step-blocked">
+            <span class="pipeline-num" style="color:var(--danger)">NO REMOTE TRANSFER</span>
+            <span class="pipeline-label">External Developer Servers</span>
+            <span class="pipeline-desc">No external servers exist. Data is never transmitted across the network.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+
+    <!-- STICKY TABLE OF CONTENTS -->
+    <aside class="sidebar-toc">
+      <div class="toc-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        Table of Contents
+      </div>
+      <ul class="toc-list">
+        <li><a href="#sec-overview" class="toc-link active">1. Overview & Purpose</a></li>
+        <li><a href="#sec-no-collection" class="toc-link">2. No Personal Data Collected</a></li>
+        <li><a href="#sec-local-processing" class="toc-link">3. Local Data Processing</a></li>
+        <li><a href="#sec-permissions" class="toc-link">4. Extension Permissions</a></li>
+        <li><a href="#sec-security" class="toc-link">5. Security Architecture</a></li>
+        <li><a href="#sec-third-party" class="toc-link">6. Third-Party Interactions</a></li>
+        <li><a href="#sec-retention" class="toc-link">7. Retention & Erasure Rights</a></li>
+        <li><a href="#sec-compliance" class="toc-link">8. GDPR, CCPA & Global Laws</a></li>
+        <li><a href="#sec-children" class="toc-link">9. Children's Online Privacy</a></li>
+        <li><a href="#sec-revisions" class="toc-link">10. Revision History</a></li>
+        <li><a href="#sec-contact" class="toc-link">11. Developer Contact</a></li>
+      </ul>
+
+      <div class="toc-footer-card">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc288o09ARiODMfuVcmP5tsEnRY2BnazO7wK4Z8SrJYx6ylGg/viewform?usp=pp_url&entry.1124063047=Bulk+Amazon+Scraper+-+Product+Data+Extractor"
+          class="btn-header" target="_blank" rel="noopener noreferrer" style="justify-content:center;">
+          Submit Feedback ↗
+        </a>
+        <a href="mailto:shubhamgi@zohomail.in" class="btn-header" style="justify-content:center;">
+          Email Developer
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN ARTICLE BODY -->
+    <main class="policy-doc">
+
+      <!-- SECTION 1 -->
+      <section id="sec-overview" class="policy-section">
+        <span class="section-num">SECTION 01</span>
+        <h2>1. Overview & Single-Purpose Statement</h2>
+        <p>
+          This Privacy Policy governs the use of <strong>Bulk Amazon Scraper - Product Data Extractor</strong> ("the Extension", "we", "us", or "our"), available on the Google Chrome Web Store.
+        </p>
+        <p>
+          The single purpose of the Extension is to provide e-commerce sellers, catalog managers, market researchers, and inventory auditors with a local, client-side utility to extract and audit <strong>publicly accessible Amazon product catalog information</strong> (such as titles, bullet points, prices, reviews, technical specifications, and high-resolution gallery images).
+        </p>
+
+        <div class="callout callout-success">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <div class="callout-content">
+            <strong>Strict Single-Purpose Guarantee:</strong> The Extension does not provide unrelated utilities, search injection, affiliate monetization, proxy reselling, or hidden background tasks. It functions strictly when invoked by the user to process specified Amazon ASINs or URLs.
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section id="sec-no-collection" class="policy-section">
+        <span class="section-num">SECTION 02</span>
+        <h2>2. Zero Personal Data Collected</h2>
+        <p>
+          We do not collect, transmit, intercept, or monetize any Personally Identifiable Information (PII) or sensitive personal data. Specifically:
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Collected?</th>
+                <th>Explanation & Technical Safeguard</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Personal Identifiers</strong><br><small>(Name, Email, Phone, Address)</small></td>
+                <td><span style="color:var(--success); font-weight:700;">NO</span></td>
+                <td>No account creation is required to use the Extension. We do not solicit personal identifiers.</td>
+              </tr>
+              <tr>
+                <td><strong>Amazon Account Credentials</strong><br><small>(Passwords, 2FA, Session Cookies)</small></td>
+                <td><span style="color:var(--success); font-weight:700;">NO</span></td>
+                <td>The Extension reads only public DOM elements on product listings. It never accesses or reads Amazon authentication tokens or account management screens.</td>
+              </tr>
+              <tr>
+                <td><strong>Payment & Billing Data</strong><br><small>(Credit Cards, Bank Info, Orders)</small></td>
+                <td><span style="color:var(--success); font-weight:700;">NO</span></td>
+                <td>The Extension has zero access to checkout, cart, or order history pages.</td>
+              </tr>
+              <tr>
+                <td><strong>General Browsing History</strong><br><small>(Non-Amazon Websites)</small></td>
+                <td><span style="color:var(--success); font-weight:700;">NO</span></td>
+                <td>The Extension is sandboxed to run only on explicit user interaction and does not monitor general web browsing.</td>
+              </tr>
+              <tr>
+                <td><strong>Telemetry & Analytics</strong><br><small>(Google Analytics, Mixpanel, Trackers)</small></td>
+                <td><span style="color:var(--success); font-weight:700;">NO</span></td>
+                <td>No third-party analytics libraries, advertising trackers, or telemetry beacons are present anywhere in the codebase.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section id="sec-local-processing" class="policy-section">
+        <span class="section-num">SECTION 03</span>
+        <h2>3. Data Processed Locally on Your Machine</h2>
+        <p>
+          In order to fulfill its core functionality, the Extension stores and processes operational data <strong>strictly within your local computer's browser storage (<code>chrome.storage.local</code>)</strong>. This data never leaves your device:
+        </p>
+
+        <ul>
+          <li><strong>ASIN Scraping Queues:</strong> The Amazon Standard Identification Numbers (ASINs) or Amazon search URLs you enter into the input fields.</li>
+          <li><strong>Scraped Product Records:</strong> Public listing information (titles, brand, manufacturer, sales price, list price, ratings, review counts, bullet features, dimensions, model numbers, and product image URLs).</li>
+          <li><strong>Audit Benchmark Spreadsheets:</strong> Excel templates you choose to upload to perform automated catalog discrepancy audits (e.g. title similarity, bullet point compliance).</li>
+          <li><strong>User Configuration Settings:</strong> Concurrency limits, delay timers between requests, sound notification toggle, Lite Mode toggle, and selected regional Amazon marketplace domain.</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <svg class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <div class="callout-content">
+            <strong>Browser Storage Encryption:</strong> Data stored in <code>chrome.storage.local</code> is sandboxed by Chrome's native security perimeter. Other websites and standard extensions cannot access this information.
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section id="sec-permissions" class="policy-section">
+        <span class="section-num">SECTION 04</span>
+        <h2>4. Chrome Extension Permissions & Justifications</h2>
+        <p>
+          In strict compliance with Google's <strong>Chrome Web Store Developer Program Policies</strong>, every permission specified in <code>manifest.json</code> is minimal, purposeful, and directly tied to a visible user feature:
+        </p>
+
+        <div class="perm-grid">
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">storage & unlimitedStorage</span>
+              <span class="perm-badge required">Essential</span>
+            </div>
+            <div class="perm-purpose-title">Local Data Persistence & Large Queue Caching</div>
+            <p class="perm-purpose-text">
+              Required to persist your scraped records, audit templates, custom presets, and extraction logs offline across browser sessions. <code>unlimitedStorage</code> ensures that large datasets (e.g., thousands of ASINs or high-resolution image audit results) do not exceed Chrome's default 10MB quota.
+            </p>
+          </div>
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">scripting</span>
+              <span class="perm-badge required">Essential</span>
+            </div>
+            <div class="perm-purpose-title">Listing DOM Parser Execution</div>
+            <p class="perm-purpose-text">
+              Required to inject <code>extractor.js</code> into active Amazon product listing tabs opened during scraping runs to parse publicly visible product attributes (price, bullet points, high-res images).
+            </p>
+          </div>
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">declarativeNetRequest</span>
+              <span class="perm-badge optional">Performance</span>
+            </div>
+            <div class="perm-purpose-title">Lite Mode RAM & Network Optimizer</div>
+            <p class="perm-purpose-text">
+              Exclusively used by the optional "Lite Mode" toggle. When active, it temporarily prevents heavy image, font, and video assets from downloading during bulk scraping, reducing memory consumption by up to 70% and preventing browser out-of-memory crashes.
+            </p>
+          </div>
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">tabs</span>
+              <span class="perm-badge required">Essential</span>
+            </div>
+            <div class="perm-purpose-title">Background Worker Tab Lifecycle Management</div>
+            <p class="perm-purpose-text">
+              Required to create background tabs for product URLs, detect when page navigation completes, and close worker tabs once product attributes have been safely extracted.
+            </p>
+          </div>
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">alarms</span>
+              <span class="perm-badge optional">Automation</span>
+            </div>
+            <div class="perm-purpose-title">Scheduled Auto-Scraping Triggers</div>
+            <p class="perm-purpose-text">
+              Required only when you configure the optional Scheduled Scraping feature. It wakes up the background service worker at intervals configured by the user (e.g., every 6 hours) to re-check target ASINs.
+            </p>
+          </div>
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">notifications</span>
+              <span class="perm-badge optional">Alerts</span>
+            </div>
+            <div class="perm-purpose-title">Batch Completion & CAPTCHA Alerts</div>
+            <p class="perm-purpose-text">
+              Used to display desktop notifications when a long-running scrape job finishes or when human verification (CAPTCHA) is encountered on an Amazon page.
+            </p>
+          </div>
+
+          <div class="perm-card-detailed">
+            <div class="perm-card-top">
+              <span class="perm-api-name">host_permissions (21 Regional Amazon Domains & Media CDNs)</span>
+              <span class="perm-badge required">Domain Bound</span>
+            </div>
+            <div class="perm-purpose-title">Target Amazon Marketplaces Access</div>
+            <p class="perm-purpose-text">
+              Strictly restricted to 21 authorized Amazon regional domains (including <code>amazon.com</code>, <code>amazon.co.uk</code>, <code>amazon.de</code>, <code>amazon.co.jp</code>, <code>amazon.in</code>, <code>amazon.ca</code>) and Amazon CDN image domains (<code>*.media-amazon.com</code>, <code>*.ssl-images-amazon.com</code>) to read listing data and download high-resolution gallery images.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 5 -->
+      <section id="sec-security" class="policy-section">
+        <span class="section-num">SECTION 05</span>
+        <h2>5. Security & Network Architecture</h2>
+        <p>
+          Security is built into the architecture of the Extension:
+        </p>
+
+        <ul>
+          <li><strong>No Remote Code Execution:</strong> In compliance with Manifest V3, no external scripts or remote binaries are ever fetched or executed. All code is packaged within the signed extension archive verified by Google.</li>
+          <li><strong>No Backend Server Footprint:</strong> The developer does not operate any backend servers, relays, databases, or API proxies for this extension. The extension communicates solely between your browser and Amazon's public servers.</li>
+          <li><strong>Encrypted Connections:</strong> All web requests made by worker tabs utilize secure HTTPS encryption enforced by browser protocols.</li>
+          <li><strong>Content Security Policy (CSP):</strong> Configured with strict CSP preventing inline evaluations (<code>unsafe-eval</code> is disabled) to protect against cross-site scripting (XSS).</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 6 -->
+      <section id="sec-third-party" class="policy-section">
+        <span class="section-num">SECTION 06</span>
+        <h2>6. Third-Party Interactions & Links</h2>
+        <p>
+          The Extension connects only to the following services:
+        </p>
+
+        <ul>
+          <li><strong>Amazon Regional Marketplaces:</strong> Public product pages you instruct the extension to visit. Subject to Amazon's public Terms of Use and Privacy Notice.</li>
+          <li><strong>Google Chrome Web Store:</strong> For software updates and verified user reviews.</li>
+          <li><strong>Google Forms (Voluntary Support):</strong> When you click the "Feedback & Support" link, you are directed to an optional Google Form to submit feature requests or bug reports. Any information you choose to enter into that form is governed by Google's Privacy Policy.</li>
+          <li><strong>GitHub Pages:</strong> Hosts this public Privacy Policy document. GitHub may collect standard HTTP server logs (IP address, user agent) as detailed in the GitHub Privacy Statement.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 7 -->
+      <section id="sec-retention" class="policy-section">
+        <span class="section-num">SECTION 07</span>
+        <h2>7. User Data Retention & One-Click Erasure</h2>
+        <p>
+          Because all data is retained strictly on your machine, you have complete sovereignty over your information:
+        </p>
+
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-circle">1</div>
+            <div class="step-text">
+              <strong>Via the Dashboard Reset Button:</strong>
+              Clicking the red <em>Reset</em> button in the dashboard immediately purges all current scrape queues, results tables, and cached data from <code>chrome.storage.local</code>.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-circle">2</div>
+            <div class="step-text">
+              <strong>Via Chrome Extension Settings:</strong>
+              Navigating to <code>chrome://extensions</code> &rarr; <em>Bulk Amazon Scraper</em> &rarr; <em>Clear Data</em> purges all extension cache instantly.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-circle">3</div>
+            <div class="step-text">
+              <strong>Via Extension Removal:</strong>
+              Uninstalling the Extension instantly and permanently removes all stored data, logs, and preferences from your system without leaving residual files.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8 -->
+      <section id="sec-compliance" class="policy-section">
+        <span class="section-num">SECTION 08</span>
+        <h2>8. Compliance with GDPR, CCPA & Global Privacy Standards</h2>
+        <p>
+          Because the developer does not collect, store, process, or sell any personal data on remote servers:
+        </p>
+
+        <ul>
+          <li><strong>General Data Protection Regulation (GDPR - EU/UK):</strong> Under Article 4 of the GDPR, the developer does not act as a Data Controller or Data Processor because no personal data is collected or transmitted to our custody.</li>
+          <li><strong>California Consumer Privacy Act (CCPA / CPRA):</strong> We do not sell or share personal information. We do not engage in behavioral advertising.</li>
+          <li><strong>California Online Privacy Protection Act (CalOPPA):</strong> This policy clearly identifies our data collection practices (which is zero remote collection) and provides direct contact information.</li>
+          <li><strong>Chrome Web Store Limited Use Requirements:</strong> The Extension adheres strictly to the Chrome Web Store User Data Policy, including the Limited Use requirements.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 9 -->
+      <section id="sec-children" class="policy-section">
+        <span class="section-num">SECTION 09</span>
+        <h2>9. Children's Online Privacy Protection Act (COPPA)</h2>
+        <p>
+          The Extension is designed as an e-commerce catalog tool for professionals, businesses, and researchers. It is not directed to children under the age of 13. We do not knowingly solicit or collect personal information from children under 13.
+        </p>
+      </section>
+
+      <!-- SECTION 10 -->
+      <section id="sec-revisions" class="policy-section">
+        <span class="section-num">SECTION 10</span>
+        <h2>10. Revision History & Policy Updates</h2>
+        <p>
+          We may update this policy occasionally to reflect new features, updated Chrome Web Store requirements, or browser API changes. Material updates will be documented in this section with updated version stamps:
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Revision</th>
+                <th>Effective Date</th>
+                <th>Key Modifications & Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="perm-badge optional">Latest</span></td>
+                <td>September 13, 2026</td>
+                <td>
+                  Rebranded extension title to <strong>Bulk Amazon Scraper - Product Data Extractor</strong>; updated Manifest V3 permissions justifications; enhanced local data erasure documentation; direct Google Forms integration.
+                </td>
+              </tr>
+              <tr>
+                <td><span class="perm-badge required">Previous</span></td>
+                <td>May 20, 2026</td>
+                <td>
+                  Added Lite Mode (declarativeNetRequest) resource optimization disclosures and multi-marketplace region declarations.
+                </td>
+              </tr>
+              <tr>
+                <td><span class="perm-badge required">Initial</span></td>
+                <td>January 15, 2026</td>
+                <td>Initial release of local-only scraping architecture and Chrome Web Store privacy pledge.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 11 -->
+      <section id="sec-contact" class="policy-section">
+        <span class="section-num">SECTION 11</span>
+        <h2>11. Developer Information & Official Inquiries</h2>
+        <p>
+          If you have questions regarding this Privacy Policy, have suggestions for transparency, or wish to report a security inquiry, please contact the developer directly through any of the following channels:
+        </p>
+
+        <div class="contact-card">
+          <div style="font-family:'Outfit', sans-serif; font-size:1.15rem; font-weight:700; color:#ffffff;">
+            Developer Contact Channels
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <span class="contact-label">Lead Developer</span>
+              <span class="contact-val">ShubhamGir</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Official Email</span>
+              <span class="contact-val">
+                <a href="mailto:shubhamgi@zohomail.in">shubhamgi@zohomail.in</a>
+              </span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Professional Profile</span>
+              <span class="contact-val">
+                <a href="https://www.linkedin.com/in/mrshubhamgir/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mrshubhamgir/ ↗</a>
+              </span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Official Feedback Form</span>
+              <span class="contact-val">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc288o09ARiODMfuVcmP5tsEnRY2BnazO7wK4Z8SrJYx6ylGg/viewform?usp=pp_url&entry.1124063047=Bulk+Amazon+Scraper+-+Product+Data+Extractor" target="_blank" rel="noopener noreferrer">Google Feedback Portal ↗</a>
+              </span>
+            </div>
+          </div>
+
+          <p style="font-size:0.85rem; color:var(--text-dim); margin:0;">
+            * Inquiries regarding privacy compliance or feature requests are typically reviewed within 24 to 48 business hours.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links-row">
+        <a href="#sec-overview">Overview</a>
+        <span>•</span>
+        <a href="#sec-no-collection">No Data Collection</a>
+        <span>•</span>
+        <a href="#sec-permissions">Permissions Justification</a>
+        <span>•</span>
+        <a href="#sec-compliance">GDPR / CCPA</a>
+        <span>•</span>
+        <a href="https://chromewebstore.google.com/detail/lgleigcckmlhencepokmomhbhhmhmime/reviews" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>
+        <span>•</span>
+        <a href="mailto:shubhamgi@zohomail.in">Contact Developer</a>
+      </div>
+
+      <div class="footer-disclaimer">
+        Bulk Amazon Scraper - Product Data Extractor is an independent productivity extension and is not affiliated, endorsed, or certified by Amazon Technologies, Inc., or its affiliates. Amazon, AWS, and related marks are trademarks of Amazon.com, Inc. or its affiliates.
+      </div>
+
+      <div style="font-size:0.82rem; color:var(--text-dim);">
+        &copy; 2026 ShubhamGir. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="btn-back-top" class="btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- INTERACTIVE SCROLL SPY & BACK TO TOP SCRIPT -->
+  <script>
+    (function () {
+      const backTopBtn = document.getElementById('btn-back-top');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      const sections = document.querySelectorAll('.policy-section');
+
+      // Show/hide back to top button
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+          backTopBtn.classList.add('visible');
+        } else {
+          backTopBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      // Intersection Observer for TOC active state
+      const observerOptions = {
+        root: null,
+        rootMargin: '-100px 0px -60% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            tocLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(sec => observer.observe(sec));
+    })();
+  </script>
 
 </body>
+
 </html>
